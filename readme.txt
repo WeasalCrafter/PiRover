@@ -10,9 +10,7 @@ INSTALLING PIGPIOD:
  - make
  - sudo make install
 
-To start the pigpio daemon:
- - sudo pigpiod
-To stop the pigpio daemon:
- - sudo killall pigpiod
-
 Then simply run the python file named "servo.py", and enjoy!
+
+**And for more information about the pigpiod library, check out: http://abyz.me.uk/rpi/pigpio/download.html
+
