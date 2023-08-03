@@ -26,8 +26,8 @@ Use the WSAD keys to control the rover, and the E key to stop all motors at once
     
 ## Diagrams
 
-![alt text](https://github.com/WeasalCrafter/PiRover/blob/main/diagram.png?raw=true)
-![alt text](https://github.com/WeasalCrafter/PiRover/blob/main/pinout.png?raw=true)
+![alt text](https://github.com/WeasalCrafter/PiRover/blob/main/img/diagram.png?raw=true)
+![alt text](https://github.com/WeasalCrafter/PiRover/blob/main/img/pinout.png?raw=true)
 
 ## Acknowledgements
 
