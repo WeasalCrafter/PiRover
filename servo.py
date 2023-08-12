@@ -13,7 +13,7 @@ x = 0
 
 backR = 15
 backL = 14
-frontR = 3
+frontR = 18
 frontL = 4
 
 CW = 1000
