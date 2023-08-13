@@ -7,8 +7,8 @@ os.system('sudo pigpiod')
 import pigpio
 print("servos started")
 
-filedescriptors = termios.tcgetattr(sys.stdin)
-tty.setcbreak(sys.stdin)
+#filedescriptors = termios.tcgetattr(sys.stdin)
+#tty.setcbreak(sys.stdin)
 x = 0
 
 backR = 15
@@ -16,9 +16,8 @@ backL = 14
 frontR = 18
 frontL = 4
 
-CW = 1000
-CCW = 2500
-N = 1500
+CW = 900
+CCW = 1800
 
 pi = pigpio.pi()
 
@@ -48,10 +47,14 @@ def right():
     pi.set_servo_pulsewidth(frontR,CCW)
     pi.set_servo_pulsewidth(frontL,CCW)
 def sleep():
-    pi.set_servo_pulsewidth(backR,N)
-    pi.set_servo_pulsewidth(backL,N)
-    pi.set_servo_pulsewidth(frontR,N)
-    pi.set_servo_pulsewidth(frontL,N)
+    pi.set_PWM_dutycycle(backR,0)
+    pi.set_PWM_frequency(backR,0)
+    pi.set_PWM_dutycycle(backL,0)
+    pi.set_PWM_frequency(backL,0)
+    pi.set_PWM_dutycycle(frontR,0)
+    pi.set_PWM_frequency(frontR,0)
+    pi.set_PWM_dutycycle(frontL,0)
+    pi.set_PWM_frequency(frontL,0)
 
 try:
     while True:
@@ -67,10 +70,6 @@ try:
         if x == "e" or x == "E":
             sleep()
 except KeyboardInterrupt:
-    termios.tcsetattr(sys.stdin, termios.TCSADRAIN, filedescriptors)
-    pi.set_servo_pulsewidth(backR,N)
-    pi.set_servo_pulsewidth(backL,N)
-    pi.set_servo_pulsewidth(frontR,N)
-    pi.set_servo_pulsewidth(frontL,N)
+#    termios.tcsetattr(sys.stdin, termios.TCSADRAIN, filedescriptors)
     pi.stop()
     os.system('sudo killall pigpiod')
