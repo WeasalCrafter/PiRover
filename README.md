@@ -1,40 +1,45 @@
 
 # PiRover
 
-A simple raspberry-pi driven rover that is controlled via keyboard and wifi.
-In this project I used a raspberry pi 3B, 4 servo motors, and a micro breadboard.
+A raspberry pi powered rover controlled using a web interface hosted on a localhost Flask server. You'll need to setup the raspberry pi as a wireless access point, follow this tutorial: https://www.tomshardware.com/how-to/raspberry-pi-access-point
 
+## Installation and Usage
 
-## Installation
-
-PIGPIOD is required to run this project.
+Install the Pigpio Daemon
 
 ```bash
- wget https://github.com/joan2937/pigpio/archive/master.zip
- unzip master.zip
- cd pigpio-master
- make
- sudo make install
+wget https://github.com/joan2937/pigpio/archive/master.zip
+unzip master.zip
+cd pigpio-master
+make
+sudo make install
+```
+Install Flask
+
+```bash
+sudo apt-get install python3-flask
 ```
 
-Then simply run the python file named "servo.py", and enjoy!
-Use the WSAD keys to control the rover, and the E key to stop all motors at once.
+Download and unzip this project
+```bash
+wget https://github.com/WeasalCrafter/PiRover/archive/refs/heads/main.zip
+sudo unzip main.zip
+cd main
+```
 
+You'll need your raspberry pi's ipv4 address in order to view the web panel
+```bash
+ifconfig
+```
 
-
-
+Run the program!
+```bash
+sudo python main.py
+```
+You can access the webpanel on any browser connected to the same network as the PiRover at "http://x.x.x.x:5000" where "x.x.x.x" represents the ipv4
     
-## Diagrams
-
-![alt text](https://github.com/WeasalCrafter/PiRover/blob/main/img/diagram.png?raw=true)
-![alt text](https://github.com/WeasalCrafter/PiRover/blob/main/img/pinout.png?raw=true)
-
 ## Acknowledgements
 
-- [More information about the pigpiod library](http://abyz.me.uk/rpi/pigpio/download.html )
-
-
-## Authors
-
-- [Logan Fick](https://www.github.com/weasalcrafter)
+ - [Pigpio Library](http://abyz.me.uk/rpi/pigpio/)
+ - [Flask Library](https://flask.palletsprojects.com)
 
