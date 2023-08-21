@@ -1,0 +1,39 @@
+<html>
+<head>
+        <link rel="stylesheet" href='/static/style.css' />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+        <div class="container">
+                
+        <h1>PiRover Control</h1>
+        
+        <form action="/forward/" method="post">
+                <button name="forwardBtn" type="submit">&#8679;</button>
+        </form>
+        
+        <br>
+        
+        <form action="/left/" method="post">
+                <button class="left" name="leftBtn" type="submit">&#8678;</button>
+        </form>
+        
+        &nbsp;
+        
+        <form action="/stop/" method="post">
+                <button class="stop" name="stopBtn" type="submit">X</button>
+        </form>
+        
+        &nbsp;
+               
+        <form action="/right/" method="post">
+                <button class="right" name="rightBtn" type="submit">&#8680;</button>
+        </form>
+        <br>
+        <form action="/backward/" method="post">
+                <button name="backBtn" type="submit">&#8681;</button>
+        </form>
+        </div>
+
+<body>
+</html>

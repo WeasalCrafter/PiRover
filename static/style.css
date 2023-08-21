@@ -1,0 +1,35 @@
+*{
+	font-family: arial;
+}
+
+body {
+        text-align: center;
+        line-height: 1.6;
+        font-size: 20px;
+        color: #444;
+        padding: 0 10px;
+        text-decoration: none;
+}
+
+.container {
+     margin: 30px auto;
+     max-width: 800px;   
+}
+
+button {
+	width: 100px;
+	height: 100px;
+	font-size:50px;
+	border:none;
+	border-radius:20px;
+}
+
+
+.stop {
+        color: rgb(204, 16, 16);
+        font-weight: bold;
+}
+
+form {
+        display: inline-block;
+}

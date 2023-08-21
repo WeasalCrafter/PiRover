@@ -1,0 +1,23 @@
+<html>
+<head>
+	<link rel="stylesheet" href='/static/style.css' />
+</head>
+<body>
+	<h1>PiRover Dashboard</h1>
+	<div style="text-align:center"><form action="/forward/" method="post">
+  		<button name="forwardBtn" type="submit">Forward</button>
+	</form>
+        <form action="/stop/" method="post">
+                <button name="stopBtn" class="stop" type="submit">Stop</button>
+        </form>
+	<form action="/backward/" method="post">
+                <button name="backBtn" type="submit">Backward</button>
+        </form>
+        <form action="/left/" method="post">
+                <button name="leftBtn" type="submit">Left</button>
+        </form>
+	<form action="/right/" method="post">
+                <button name="rightBtn" type="submit">Right</button>
+        </form></div>
+<body>
+</html>
